@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --theme-background: #0f1117;
+    --theme-card-background: #1e2132;
+    --theme-border: rgba(107, 79, 187, 0.2);
+    --theme-text-primary: #ffffff;
+    --theme-text-secondary: #94a3b8;
+    --theme-text-accent: #8c7ae6;
+    --theme-button-primary: #6b4fbb;
+    --theme-button-hover: #8c7ae6;
+  }
+
+  html {
+    font-family: 'JetBrains Mono', 'Ubuntu Mono', monospace;
+  }
+  
+  body {
+    @apply transition-colors duration-200;
+    background-color: var(--theme-background);
+    color: var(--theme-text-primary);
+  }
+
+  code, pre {
+    font-family: 'JetBrains Mono', 'Ubuntu Mono', monospace;
+  }
+
+  /* Style file input button */
+  [type="file"]::file-selector-button {
+    background-color: var(--theme-button-primary);
+    color: var(--theme-text-primary);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+
+  [type="file"]::file-selector-button:hover {
+    background-color: var(--theme-button-hover);
+  }
+}
+
+/* Theme-aware component classes */
+.bg-theme-card {
+  background-color: var(--theme-card-background);
+}
+
+.border-theme {
+  @apply border border-opacity-20;
+  border-color: var(--theme-button-primary);
+}
+
+.text-theme-primary {
+  color: var(--theme-text-primary);
+}
+
+.text-theme-secondary {
+  color: var(--theme-text-secondary);
+}
+
+.text-theme-accent {
+  color: var(--theme-text-accent);
+}
+
+.bg-theme-button {
+  background-color: var(--theme-button-primary);
+}
+
+.hover\:bg-theme-button-hover:hover {
+  background-color: var(--theme-button-hover);
+}
