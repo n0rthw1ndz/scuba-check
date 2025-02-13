@@ -2,6 +2,9 @@
 
 A privacy-focused email security analysis tool that performs comprehensive threat detection and security assessment directly in your browser. Analyze email headers, authentication, URLs, and attachments with zero data transmission.
 
+
+![Image](https://github.com/user-attachments/assets/4409007b-3e3a-4f78-9d05-02f8be9c9022)
+
 ## Features
 
 - 🔒 **Complete Privacy**: All analysis is performed locally in your browser
